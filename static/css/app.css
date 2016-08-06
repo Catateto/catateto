@@ -1,0 +1,54 @@
+*
+{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/* Header
+ * --------------------------------------------------------------------------*/
+.header
+{
+    padding: 1.25rem 0;
+
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    background-color: #fff;
+}
+.header-brand
+{
+    display: inline-block;
+}
+.header-menu
+{
+    display: inline;
+    float: right;
+}
+.header-menu-list
+{
+    display: inline;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+.header-menu-item
+{
+    line-height: 6.25rem;
+
+    display: inline-block;
+
+    margin: 0;
+    padding: 0 1.25rem;
+
+    vertical-align: middle;
+}
+.header-menu-item:last-child
+{
+    padding-right: 0;
+}
+.header-menu-link
+{
+    text-decoration: none;
+}
