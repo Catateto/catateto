@@ -6,6 +6,7 @@ from django.utils.translation import ugettext_lazy as _
 
 class RealEstate(models.Model):
     url = models.URLField(unique=True)
+    name = models.CharField(_('Name'), max_length=140)
 
     is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
