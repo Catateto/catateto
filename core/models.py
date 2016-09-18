@@ -1,5 +1,3 @@
-from __future__ import unicode_literals
-
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -16,7 +14,7 @@ class RealEstate(models.Model):
         verbose_name = _('Real estate')
         verbose_name_plural = _('Real estates')
 
-    def __unicode__(self):
+    def __str__(self):
         return self.url
 
 
@@ -57,7 +55,7 @@ class Immobile(models.Model):
         verbose_name = _('Immobile')
         verbose_name_plural = _('Immobiles')
 
-    def __unicode__(self):
+    def __str__(self):
         return self.url
 
 

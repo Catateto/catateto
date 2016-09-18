@@ -1,3 +1,4 @@
+{% load compress %}
 {% load static %}
 <!DOCTYPE html>
 
@@ -11,9 +12,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:400,300,600">
+    {% compress css %}
     <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
     <link rel="stylesheet" href="{% static 'css/skeleton.css' %}">
-    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <link rel="stylesheet" href="{% static 'css/app.sass' %}" type="text/x-sass">
+    {% endcompress %}
 
     <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
 </head>
@@ -21,20 +24,33 @@
 <body>
     <div class="header u-full-width">
         <div class="container">
-            <a href="#" class="header-brand">
-                <img alt="Catateto - Agregador de Imóveis" src="{% static 'images/catateto-logo-header.png' %}">
-            </a>
+            <div class="mobile-nav-toggle">
+                <span></span>
+            </div>
+            <a href="#" class="header-brand">Brand</a>
             <div class="header-menu">
                 <ul class="header-menu-list">
                     <li class="header-menu-item">
-                        <a href="#" class="header-menu-link">Sobre nós</a>
+                        <a href="#" class="header-menu-link">Imóveis</a>
                     </li>
                     <li class="header-menu-item">
-                        <a href="#" class="header-menu-link">Contato</a>
+                        <a href="#" class="header-menu-link">Imóveis</a>
+                    </li>
+                    <li class="header-menu-item">
+                        <a href="#" class="header-menu-link">Imóveis</a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('.mobile-nav-toggle').on('click', function() {
+            $('.header-menu').toggleClass('is-open');
+        });
+    });
+    </script>
 </body>
 </html>
