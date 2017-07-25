@@ -1,4 +1,3 @@
-{% load compress %}
 {% load static %}
 <!DOCTYPE html>
 
@@ -12,11 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:400,300,600">
-    {% compress css %}
     <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
     <link rel="stylesheet" href="{% static 'css/skeleton.css' %}">
     <link rel="stylesheet" href="{% static 'css/app.sass' %}" type="text/x-sass">
-    {% endcompress %}
 
     <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
 </head>
